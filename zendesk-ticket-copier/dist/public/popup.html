@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zendesk Ticket Copier</title>
+  <link rel="stylesheet" href="tailwind.css">
+  <style>
+    ::placeholder {
+      color: #bbb; /* Light grey for better visibility */
+    }
+    .input:focus::placeholder {
+      color: #ddd; /* Even lighter grey when focused */
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white flex justify-center items-center h-screen">
+  <div class="container bg-gray-800 p-6 rounded shadow-lg">
+    <h1 class="header text-lg font-bold mb-4">Zendesk Ticket Copier</h1>
+    <button id="copy-ticket" class="btn bg-blue-500 text-white p-2 rounded">Copy Ticket Number</button>
+    <div id="alert" class="alert bg-green-500 text-white p-4 rounded mt-4 hidden">Ticket number copied!</div>
+
+    <div class="calculator mt-6">
+      <h3 class="text-lg font-bold mb-2">Bonus Calculator</h3>
+      <input type="number" id="price" placeholder="Enter price in IRT" class="input mt-2 bg-gray-700 text-white p-2 rounded">
+      <div class="buttons mt-4 flex flex-wrap">
+        <button data-percentage="5" class="calculate-bonus btn bg-blue-500 text-white p-2 rounded m-1">5%</button>
+        <button data-percentage="7" class="calculate-bonus btn bg-blue-500 text-white p-2 rounded m-1">7%</button>
+        <button data-percentage="10" class="calculate-bonus btn bg-blue-500 text-white p-2 rounded m-1">10%</button>
+        <button data-percentage="15" class="calculate-bonus btn bg-blue-500 text-white p-2 rounded m-1">15%</button>
+        <button data-percentage="20" class="calculate-bonus btn bg-blue-500 text-white p-2 rounded m-1">20%</button>
+      </div>
+      <p id="bonus" class="mt-4">Bonus: </p>
+      <button id="copy-price" class="btn bg-blue-500 text-white p-2 rounded mt-2">Copy Bonus Result</button>
+    </div>
+    
+    <div class="email-copy mt-6">
+      <button id="copy-email" class="btn bg-blue-500 text-white p-2 rounded">Copy Email</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
